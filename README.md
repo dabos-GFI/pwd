@@ -1,21 +1,21 @@
-# pwd
+# pwd [![NPM version](https://badge.fury.io/js/pwd2.svg)](http://badge.fury.io/js/pwd2)
 > &lt;pwd.h&gt; binding for [node](http://nodejs.org).
 
 
 
 ```js
 var fs = require('fs');
-var pwd = require('pwd');
+var pwd = require('pwd2');
 
 var stat = fs.statSync(path);
 
-var passwd = pwd.getgrgid(stat.uid);
+var passwd = pwd.getpwuid(stat.uid);
 console.log('the username for "' + path + '" is: ' + passwd.pw_name);
 ```
 ## Installation
 
 ```sh
-$ npm install pwd --save
+$ npm install pwd2 --save
 ```    
 
 ## Features

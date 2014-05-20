@@ -1,5 +1,5 @@
 {
-  "name": "pwd",
+  "name": "pwd2",
   "version": "1.0.0",
   "description": " &lt;pwd.h&gt; binding for node",
   "main": "build/Release/pwd.node",
