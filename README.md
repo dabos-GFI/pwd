@@ -31,6 +31,16 @@ There is two available functions:
     var passwd = pwd.getpwnam('root');
 ```
 
++ getgrnam(name)
+```js
+    var passwd = pwd.getgrnam('root');
+```
+
++ getgrgid(gid)
+```js
+    var passwd = pwd.getgrgid(1000);
+```
+
 These functions obtain information from opendirectoryd(8), including records in /etc/master.passwd which is described in master.passwd(5).
 Each entry in the database is defined by the structure passwd found in the include file &lt;pwd.h&gt;:
 
@@ -48,6 +58,13 @@ Each entry in the database is defined by the structure passwd found in the inclu
     pw_expire,     /* account expiration - NOT SUPPORTED IN V1.0.0 */
     pw_fields      /* internal: fields filled in - NOT SUPPORTED IN V1.0.0 */
 }
+
+{
+   gr_name;       /* group name */
+   gr_passwd;     /* group password */
+   gr_gid;        /* group ID */
+   gr_mem;        /* group members */
+};
 ```
 
 ## More Information
